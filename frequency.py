@@ -1,5 +1,6 @@
 #!/bin/env python2.7
 #chris
 
-def frequency(inputs, outputs):
+def get_frequency_scores(inputs):
 	#TODO
+	return [1,1,1,1,1]
