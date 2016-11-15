@@ -1,6 +1,7 @@
 #!/bin/env python2.7
 #sonia
 
-def get_dictionary_scores(inputs):
+def get_dictionary_scores(inputs, m, n):
+	print "Calculating dictionary scores..."
 	#TODO
-	return [1,1,1,1,1]
+	return [0,0,0,0,0]
