@@ -2,6 +2,7 @@
 
 ## Convention
 Inputs: array of honeyworkds+password. 
+
 Output: array of scores between 0 and 1
 
 ## Strategy
