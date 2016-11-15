@@ -2,7 +2,7 @@
 #chris
 from bz2 import BZ2File
 
-def get_frequency_scores(sweetwords=['a','a','a','a','a'], m=10, n=5):
+def init_frequency_scores():
 	print "Calculating frequency scores..."
 	filename = 'rockyou-withcount.txt.bz2'
 	print "Extracting and Loading file: ", filename
@@ -18,7 +18,10 @@ def get_frequency_scores(sweetwords=['a','a','a','a','a'], m=10, n=5):
 		if len(pwd_count_pair) !=2: continue
 		count, password  = pwd_count_pair
 		password_freq_dict[password] = float(count)/max_counts
+	return password_freq_dict
 
+
+def get_frequency_scores(password_freq_dict, sweetwords, m, n):
 	scores = [None] * n
 	for i in range(n):
 		if sweetwords[i] not in password_freq_dict.keys(): 
