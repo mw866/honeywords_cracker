@@ -28,7 +28,7 @@ def get_frequency_scores(password_count_dict, m=10, n=5, sweetwords=['abc','123'
 			counts[i]=password_count_dict[sweetwords[i]]
 	total_count = sum(counts)
 	if total_count != 0:
-		scores = [(float(count)/total_count) for count in counts]
+		scores = [(count/float(total_count)) for count in counts]
 	else:
 		scores= [0 for count in counts]
 	return scores
