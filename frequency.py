@@ -28,7 +28,6 @@ def get_frequency_scores(password_freq_dict, sweetwords, m, n):
 			scores[i]=0
 		else:
 			scores[i]=password_freq_dict[sweetwords[i]]
-	print scores
 	return scores
 
 if __name__ == '__main__':
