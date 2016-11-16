@@ -8,17 +8,6 @@ We will also be creating and searching for a common numbers dictionary
   * Names
   * Common numbers
 '''
-
-#!/bin/env python2.7
-#sonia
-'''
-Gives higher scores to passwords that have dictionary words or names in them (rather than randomness)
-We will also look for when the dictionary word or name is capitalized on the first letter only.
-We will also be creating and searching for a common numbers dictionary
-  * Capitalization
-  * Names
-  * Common numbers
-'''
 import numpy as np
 
 def get_dictionary_scores(inputs, m, n):
