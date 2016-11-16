@@ -16,11 +16,11 @@ def main():
 			n = min(len(passwords), n)
 			
 			frequency_scores = frequency.get_frequency_scores(password_freq_dict, passwords, m, n)
-			
+			print "frequency_scores", frequency_scores
 			block_scores = block.get_block_scores(passwords, m, n)
-			
+			print "block_scores", block_scores
 			dictionary_scores = dictionary.get_dictionary_scores(passwords, m, n)
-			
+			print "dictionary_scores", dictionary_scores
 			get_real(passwords, frequency_scores, block_scores, dictionary_scores)
 	return
 
