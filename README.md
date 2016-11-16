@@ -1,7 +1,7 @@
 # CS 5435 Homework 4
 
 ## Convention
-Inputs: array of honeyworkds+password. 
+Inputs: array of honeywords + password.
 
 Output: array of scores between 0 and 1
 
@@ -9,6 +9,7 @@ Output: array of scores between 0 and 1
 1. Frequency analysis [Chris]
   * Only if all the honeywords are found in the dataset
   * Put weights based on the height in the list
+  
 2. Find dictionary words [Sonia]
   * Capitalization
   * Names
@@ -21,12 +22,10 @@ Output: array of scores between 0 and 1
   * Add Comment Collapse
 
 ===
-Find similar/outliers and kick those ones out 
+Find similar/outliers and kick those ones out
   * Majority vote
   * Finding tough nuts
   * If there is only one digit, 50% make it 1
 
 ## References
 * http://www.arijuels.com/wp-content/uploads/2013/09/JR13.pdf
-
-
