@@ -14,7 +14,7 @@ def decide_func(char):
 
 def get_block_scores(sweetwords=['aa123hello#@', 'a1a2a3', 'thisIsCool', '@#!@#haha', 'a!1c#3f%'], m=8, n=5):
 	scores = []
-	print(sweetwords)
+	#print(sweetwords)
 	for sweetword in sweetwords:
 		block_num = 1
 		func = decide_func(sweetword[0])
@@ -24,7 +24,7 @@ def get_block_scores(sweetwords=['aa123hello#@', 'a1a2a3', 'thisIsCool', '@#!@#h
 				func = decide_func(sweetword[i + 1])
 		scores.append(1.0 / block_num)
 	scores = [float(s) / sum(scores) for s in scores]
-	print(scores)
+	#print(scores)
 	return scores
 
 if __name__ == '__main__':
