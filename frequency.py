@@ -12,7 +12,7 @@ def init_frequency_scores():
 	# max_counts =  290729 # '123456'
 
 	for pwd_count_pair in rockyou_list:
-		pwd_count_pair =  pwd_count_pair.strip(' ').split(' ')
+		pwd_count_pair =  pwd_count_pair.strip().split(' ')
 		if len(pwd_count_pair) !=2: continue
 		count, password  = pwd_count_pair
 		password_count_dict[password] = int(count)

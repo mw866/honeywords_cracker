@@ -3,7 +3,7 @@
 import sys, block, frequency, dictionary
 
 def main():
-	print "Usage: python ", sys.argv[0], " m  (no. of sweetword sets/rows), n = 5 (no. of sweetwords/columns) filename \n Example: python main.py 100 5 real_and_sweet.txt "
+	print "Usage: python ", sys.argv[0], " m  (no. of sweetword sets/rows), n = 5 (no. of sweetwords/columns) filename\nExample: python main.py 100 5 real_and_sweet.txt "
 	m = int(sys.argv[1])
 	n = int(sys.argv[2])
 	filename = sys.argv[3] 
