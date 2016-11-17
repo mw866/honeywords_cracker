@@ -11,7 +11,7 @@ We will also be creating and searching for a common numbers dictionary
 import numpy as np
 
 def get_dictionary_scores(inputs, m, n):
-  print "Calculating dictionary scores..."
+  # print "Calculating dictionary scores..."
 
   scores = np.zeros(len(inputs))
 
@@ -50,5 +50,5 @@ def get_dictionary_scores(inputs, m, n):
   if sum(scores):
     scores = [float(s) / sum(scores) for s in scores]
 
-  print scores
+  # print scores
   return scores

@@ -12,16 +12,16 @@ def init_frequency_scores():
 	# max_counts =  290729 # '123456'
 
 	for pwd_count_pair in rockyou_list:
-		pwd_count_pair =  pwd_count_pair.strip().split(' ')
+		pwd_count_pair =  pwd_count_pair.strip(' ').split(' ')
 		if len(pwd_count_pair) !=2: continue
 		count, password  = pwd_count_pair
 		password_count_dict[password] = int(count)
 	return password_count_dict
 
-# input m is not used.
-def get_frequency_scores(password_count_dict, m=10, n=5, sweetwords=['abc','123','123456','&)(#!*', 'trumpispresident']):
-	counts = [None] * n
-	for i in range(n):
+# input m is not used. 
+def get_frequency_scores(password_count_dict, m, n, sweetwords):
+	counts = [None] * len(sweetwords)
+	for i in range(len(sweetwords)):
 		if sweetwords[i] not in password_count_dict.keys(): 
 			counts[i]=0
 		else:
@@ -34,4 +34,5 @@ def get_frequency_scores(password_count_dict, m=10, n=5, sweetwords=['abc','123'
 	return scores
 
 if __name__ == '__main__':
-	print get_frequency_scores(init_frequency_scores())
+	password_count_dict = init_frequency_scores()
+	print get_frequency_scores(password_count_dict, m=10, n=5, sweetwords=['abc','123','123456','&)(#!*', 'trumpispresident'])
