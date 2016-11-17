@@ -17,36 +17,17 @@ def get_dictionary_scores(inputs, m, n):
 
   wordsFound = {}
 
-  #Retrieving the names corpus
-  names = ["Teddy", "chris", "howard", "andrew"]
-
   #Retrieving the dictionary words
-  words = ["tweety", "monkey", "sylvester"]
-
-  #Retrieving the most common numbers
-  numbers = ["123", "3456", "69"]
+  f = open('words.txt', 'r')
+  words = f.read().splitlines()
 
   #Going through the given sweetword input
   for i, sweetword in enumerate(inputs):
 
-    #If there is a NAME found, increase the score
-    for n in names:
-      if n.lower() in sweetword.lower():
-        scores[i] += 1
-
-        #if the name is capitalized, give it extra score
-        if sweetword[sweetword.lower().index(n.lower())].isupper():
-          scores[i] += 1
-
-        #if name is found multiple times
-        if n in wordsFound:
-          wordsFound[n].append(i)
-        else:
-          wordsFound[n] = [i]
-
 
     #If there is a WORD found, increase the score
     for w in words:
+
       if w.lower() in sweetword.lower():
         scores[i] += 1
 
@@ -60,25 +41,14 @@ def get_dictionary_scores(inputs, m, n):
         else:
           wordsFound[w] = [i]
 
-
-    #If there is a NUMBER found, increase the score
-    for num in numbers:
-      if num in sweetword:
-        scores[i] += 1
-
-        #if a number is found multiple times
-        if num in wordsFound:
-          wordsFound[num].append(i)
-        else:
-          wordsFound[num] = [i]
-
   #increasing score from repeat words/names/numbers located in wordsFound dictionary
   for key, value in wordsFound.items():
     for v in value:
       scores[v] += 1
 
   #normalizing the score by the sum of all scores
-  scores = [float(s) / sum(scores) for s in scores]
+  if sum(scores):
+    scores = [float(s) / sum(scores) for s in scores]
 
   print scores
   return scores
