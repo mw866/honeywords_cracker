@@ -12,7 +12,6 @@ import numpy as np
 
 def get_dictionary_scores(inputs, m, n):
   # print "Calculating dictionary scores..."
-
   scores = np.zeros(len(inputs))
 
   wordsFound = {}
