@@ -1,5 +1,9 @@
 # CS 5435 Homework 4
-
+## Description:
+A Python program that identify the "honeywords" as proposed in 
+ Juels, Ari, and Ronald L. Rivest. "Honeywords: Making password-cracking detectable." Proceedings of the 2013 ACM SIGSAC conference on Computer & communications security. ACM, 2013.
+ http://www.arijuels.com/wp-content/uploads/2013/09/JR13.pdf
+ 
 ## Convention
 Inputs: array of honeywords + password.
 
@@ -27,5 +31,3 @@ Find similar/outliers and kick those ones out
   * Finding tough nuts
   * If there is only one digit, 50% make it 1
 
-## References
-* http://www.arijuels.com/wp-content/uploads/2013/09/JR13.pdf
