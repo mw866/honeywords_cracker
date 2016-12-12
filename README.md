@@ -2,7 +2,8 @@
 ## Description:
 A Python program that attacks against the "honeywords" as proposed in 
 
-__Juels, Ari, and Ronald L. Rivest. "Honeywords: Making password-cracking detectable." Proceedings of the 2013 ACM SIGSAC conference on Computer & communications security. ACM, 2013. Link: https://people.csail.mit.edu/rivest/honeywords/ __
+__Juels, Ari, and Ronald L. Rivest. "Honeywords: Making password-cracking detectable." Proceedings of the 2013 ACM SIGSAC conference on Computer & communications security. ACM, 2013.__
+Link: https://people.csail.mit.edu/rivest/honeywords/ 
  
 ## Convention
 Inputs: array of honeywords + password.
